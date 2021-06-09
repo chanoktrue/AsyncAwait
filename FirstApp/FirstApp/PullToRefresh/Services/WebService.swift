@@ -20,9 +20,7 @@ struct CreateToken: Codable {
 @available(iOS 15.0, *)
 struct WebService {
         
-    func api(urlString: String, completion: @escaping (Result<[User], NetworkError>) -> ()) {
-        
-        let token = "Bearere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpdGVtcyI6W3sidXNlcm5hbWUiOiJyb2oiLCJwYXNzd29yZCI6IjEyMzQ1NiJ9XSwiaWF0IjoxNjIzMjAzOTYxfQ.9J4o3MyKD-ofG7bHaSOnV6T4wqfqlOKo1xT-mZ-PtPE"
+    func api(urlString: String, token: String, completion: @escaping (Result<[User], NetworkError>) -> ()) {
 
         guard let url = URL(string: urlString) else {
             completion(.failure(.InvalidURL))

@@ -29,7 +29,8 @@ struct PullToRefresView: View {
         .refreshable {
             // Todo
 //          userVM.fetchUser()
-            await userVM.fetchUserAsyncAwait()
+//            await userVM.fetchUserAsyncAwait()
+            await userVM.fetchUserAsyncAwaitWithToken()
         }
         
     }
